@@ -68,4 +68,4 @@ setup script installs all needed npm dependencies, but you have to install Node.
 
 ## license
 
-somachord is under mit license, keep that in mind when doing something with it.
+somachord is under [mit license](https://github.com/cv55n/somachord/blob/main/LICENSE), keep that in mind when doing something with it.
