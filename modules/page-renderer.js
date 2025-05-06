@@ -38,7 +38,7 @@ export default function(obj) {
         <meta property="og:description" content="${loc(obj.lang, 'desc', 'embed')}" />
         <meta property="og:image" content="${process.env.selfURL}icons/generic.png" />
         <meta name="title" content="${appName}" />
-         <meta name="description" content="${loc(obj.lang, 'desc', 'embed')}" />
+        <meta name="description" content="${loc(obj.lang, 'desc', 'embed')}" />
         <meta name="theme-color" content="#000000" />
         <meta name="twitter:card" content="summary" />
 
@@ -80,7 +80,7 @@ export default function(obj) {
                 <div id="desc" class="popup-desc"><a class="text-backdrop" href="${repo}">${loc(obj.lang, 'changelog', 'github')}</a></div>
             </div>
         </div>
-        <div id="popup-donate" class="popup-narrow center box" style="visibility: hidden;">
+        <div id="popup-donate" class="popup-narrow scrollable center box" style="visibility: hidden;">
             <div id="popup-header" class="popup-header">
                 <button id="close" class="button mono" onclick="popup('donate', 0)" aria-label="${loc(obj.lang, 'accessibility', 'close')}">x</button>
                 <div id="title" class="popup-title">${loc(obj.lang, 'title', 'donate')}</div>
