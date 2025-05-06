@@ -148,7 +148,7 @@ input[type="checkbox"] {
     transform: translate(-50%, -50%);
 }
 
-#cobalt-main-box {
+#somachord-main-box {
     position: fixed;
     width: 60%;
     height: auto;
@@ -485,7 +485,7 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 1440px) {
-    #cobalt-main-box,
+    #somachord-main-box,
     .popup {
         width: 65%;
     }
@@ -496,7 +496,7 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 1024px) {
-    #cobalt-main-box,
+    #somachord-main-box,
     .popup {
         width: 75%;
     }
@@ -524,7 +524,7 @@ input[type="checkbox"] {
         text-align: center;
     }
 
-    #cobalt-main-box {
+    #somachord-main-box {
         width: 80%;
         display: flex;
         border: none;
@@ -552,7 +552,7 @@ input[type="checkbox"] {
         text-align: center;
     }
 
-    #cobalt-main-box {
+    #somachord-main-box {
         width: 90%;
         display: flex;
         border: none;

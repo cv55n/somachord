@@ -271,7 +271,7 @@ window.onload = function () {
 
     changeDownloadButton(0, '>>');
 
-    eid("cobalt-main-box").style.visibility = 'visible';
+    eid("somachord-main-box").style.visibility = 'visible';
     eid("footer").style.visibility = 'visible';
 
     eid("url-input-area").value = "";
