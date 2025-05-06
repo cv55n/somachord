@@ -1,0 +1,39 @@
+{
+    "appName": "somachord",
+
+    "version": "2.1",
+
+    "streamLifespan": 1800000,
+    "maxVideoDuration": 1920000,
+
+    "genericUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+
+    "repo": "https://github.com/cv55n/somachord",
+
+    "supportedLanguages": ["en"],
+
+    "authorInfo": {
+        "name": "cavassani",
+        "link": "https://cv55n.github.io/",
+        "contact": "https://www.instagram.com/cavassxni",
+        "twitter": "grungegaze"
+    },
+
+    "internetExplorerRedirect": {
+        "newNT": ["6.1", "6.2", "6.3", "10.0"],
+        "old": "https://mypal-browser.org/",
+        "new": "https://vivaldi.com/"
+    },
+
+    "donations": {
+        "ethereum": "0x35F0E66065Dc73F6303F7375A3B4bE730304B0b3",
+        "bitcoin": "bc1qhd3l83utamwph4plkerdwqf4enyehntlznd6n2",
+        "solana": "8XttaGucWYQKdE7asMM5iZXLWSJGv8T6SLdk3Me2r28A"
+    },
+    
+    "quality": {
+        "hig": "1080",
+        "mid": "720",
+        "low": "480"
+    }
+}
