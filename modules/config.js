@@ -14,6 +14,7 @@ let supportedLanguages = config.supportedLanguages;
 let quality = config.quality;
 let internetExplorerRedirect = config.internetExplorerRedirect;
 let donations = config.donations;
+let ffmpegArgs = config.ffmpegArgs;
 
 export {
     appName,
@@ -26,5 +27,6 @@ export {
     supportedLanguages,
     quality,
     internetExplorerRedirect,
-    donations
+    donations,
+    ffmpegArgs
 };
