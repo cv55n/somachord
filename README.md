@@ -19,10 +19,11 @@ somachord doesn't remux any videos, so you get videos of max quality available (
 ## what still has to be done
 
 - [ ] quality switching for bilibili and twitter
-- [ ] clean up the localisation
-    - [ ] sort contents of .json files
-    - [ ] rename each entry key to be less linked to specific service
-- [ ] add support for more languages when localisation clean up is done
+- [ ] Language picker in settings
+- [x] clean up the mess that localisation is right now
+    - [x] sort contents of .json files
+    - [x] rename each entry key to be less linked to specific service (entries like youtubeBroke are awful, I'm sorry)
+- [x] Add support for more languages when localisation clean up is done
 - [ ] use esmbuild to minify frontend css and js
 - [ ] make switch buttons in settings selectable with keyboard
 - [ ] a better changelog

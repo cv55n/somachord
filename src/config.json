@@ -10,7 +10,7 @@
 
     "repo": "https://github.com/cv55n/somachord",
 
-    "supportedLanguages": ["en"],
+    "supportedLanguages": ["en", "pt"],
 
     "authorInfo": {
         "name": "cavassani",

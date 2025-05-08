@@ -92,7 +92,7 @@ export async function streamLiveRender(streamInfo, res) {
             });
         } else {
             res.status(400).json({
-                status: "error", text: loc('en', 'apiError', 'corruptedVideo')
+                status: "error", text: loc('en', 'apiError', 'corruptedStream')
             });
         }
     } catch (e) {

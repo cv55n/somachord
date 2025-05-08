@@ -40,6 +40,7 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
 
                     return (!r.error) ? apiJSON(2, {
                         type: "render", urls: r.urls,
+                        lang: lang,
                         service: host, ip: ip,
                         filename: r.filename,
                         salt: process.env.streamSalt, time: r.time
@@ -50,7 +51,8 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                 if (patternMatch["id"] && patternMatch["id"].length >= 11) {
                     let fetchInfo = {
                         id: patternMatch["id"].slice(0,11),
-                        lang: lang, quality: quality,
+                        lang: lang,
+                        quality: quality,
                         format: "mp4"
                     };
 
@@ -87,7 +89,8 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                     let r = await reddit({
                         sub: patternMatch["sub"],
                         id: patternMatch["id"],
-                        title: patternMatch["title"]
+                        title: patternMatch["title"],
+                        lang: lang,
                     });
                     
                     return (!r.error) ? apiJSON(2, {

@@ -1,0 +1,18 @@
+{
+    "generic": "algo deu errado e não consegui nada para você. Você pode tentar novamente, mas se o problema persistir, por favor, <a class=\"text-backdrop nowrap\" href=\"{repo}\">me avise</a>.",
+    "notSupported": "parece que este serviço ainda não é suportado ou seu link é inválido.",
+    "brokenLink": "{s} é suportado, mas há algo errado com seu link. talvez você não o tenha copiado completamente?",
+    "noLink": "não consigo adivinhar o que você quer baixar! por favor, me dê um link.",
+    "noRender": "algo deu errado e a página não pôde ser renderizada. se você quiser que eu corrija isso, <a href=\"https://instagram.com/cavassxni/\">entre em contato comigo</a>. Seria útil se você fornecesse o hash de confirmação ({s}) junto com as etapas de recriação. obrigado :D",
+    "rateLimit": "você está fazendo muitos pedidos. acalme-se e tente novamente em alguns minutos.",
+    "noFetch": "não foi possível obter os metadados. verifique se o seu link está correto e tente novamente.",
+    "lengthLimit": "o limite de duração atual é de {s} minutos. o que você tentou baixar é maior que isso. escolha outra coisa para baixar!",
+    "errorFetch": "algo deu errado com a busca de informações. você pode tentar um formato e resolução diferentes ou tentar novamente mais tarde.",
+    "corruptedStream": "parece que este download está corrompido. tente novamente ou tente um formato e resolução diferentes.",
+    "noInternet": "parece que não há internet ou a api {appName} está inativa. verifique sua conexão e tente novamente.",
+    "cantConnectToAPI": "não consegui conectar à api {s}. parece que o {s} está inativo ou o ip do servidor {appName} foi bloqueado. tente novamente mais tarde.",
+    "nothingToDownload": "parece que não há nada para baixar. tente outro link!",
+    "liveVideo": "não consigo baixar um vídeo ao vivo. espere a transmissão terminar e tente novamente.",
+    "noStreamID": "não existe tal streamId.",
+    "noType": "não existe esse tipo de resposta esperada."
+}
