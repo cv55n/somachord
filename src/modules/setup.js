@@ -3,7 +3,7 @@ import { existsSync, unlinkSync, appendFileSync } from "fs";
 import { createInterface } from "readline";
 import { execSync } from "child_process";
 
-import { Cyan, Bright, Green } from "./sub/console-text.js";
+import { Cyan, Bright, Green } from "./sub/consoleText.js";
 
 let envPath = './.env';
 let q = `${Cyan('?')} \x1b[1m`;
