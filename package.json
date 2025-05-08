@@ -10,8 +10,8 @@
     "node": ">=14.16"
   },
   "scripts": {
-    "start": "node somachord",
-    "setup": "node modules/setup.js"
+    "start": "node src/somachord",
+    "setup": "node src/modules/setup"
   },
   "repository": {
     "type": "git",

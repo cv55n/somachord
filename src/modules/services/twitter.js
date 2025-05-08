@@ -1,6 +1,6 @@
 import got from "got";
 
-import loc from "../sub/loc.js";
+import loc from "../sub/i18n.js";
 import { services } from "../config.js";
 
 const configSt = services.twitter;
