@@ -1,9 +1,9 @@
 {
   "name": "somachord",
   "description": "social media downloader",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "author": "cavassani",
-  "exports": "./somachord.js",
+  "exports": "./src/somachord.js",
   "type": "module",
   "license": "MIT",
   "engines": {

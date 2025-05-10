@@ -138,9 +138,9 @@
 
     "tiktok": {
         "patterns": [
-            ":pageid/:type/:postid", ":id"
+            ":user/:type/:postId", ":id"
         ],
 
-        "enabled": false
+        "enabled": true
     }
 }
