@@ -1,15 +1,15 @@
 {
-    "name": "french",
+    "name": "français",
     "code": "fr",
     "substrings": {
         "ContactLink": "<a class=\"text-backdrop\" href=\"{repo}\">fais-moi signe</a>"
     },
     "strings": {
-        "LinkInput": "copiez le lien ici",
-        "AboutSummary": "{appName} est l'endroit parfait pour télécharger des vidéos sur les médias sociaux. zéro pubs et trackers. colle simplement le lien d'un post pour commencer!",
+        "LinkInput": "copie ton lien ici",
+        "AboutSummary": "{appName} est l'endroit parfait pour télécharger des vidéos sur les médias sociaux. zéro pubs, trackers ou tout autre merde. colle simplement le lien d'un post pour commencer!",
         "AboutSupportedServices": "services supportés:",
         "EmbedBriefDescription": "sauvegarde du contenu des médias sociaux facilement et sans tracking",
-        "MadeWithLove": "fait avec <3 par cavassani",
+        "MadeWithLove": "fait avec <3 par cavassani, traduction par lexito",
         "AccessibilityInputArea": "zone de saisie du lien",
         "AccessibilityOpenAbout": "ouvrir la fenêtre contextuelle de la section à propos",
         "AccessibilityDownloadButton": "bouton télécharger",
@@ -60,8 +60,8 @@
         "AccessibilityEnableDownloadPopup": "demander comment sauvegarder",
         "SettingsFormatDescription": "sélectionne webm si tu veux la meilleure qualité possible. les vidéos webm sont habituellement de plus haute qualité, mais les appareils ios ne peuvent pas les jouer par défaut. tous les téléchargements «audio seulement» sont de qualité maximum.",
         "SettingsQualityDescription": "si la résolution sélectionnée n'est pas disponible, celle la plus proche est choisie à la place. si tu veux envoyer une vidéo youtube sur twitter, sélectionne 720p. twitter préfère les vidéos dans ce format.",
-        "DonateSubtitle": "c'est difficile de payer pour l'hébergement",
-        "DonateDescription": "je n'aime pas la crypto présentement, mais c'est présentement la seule manière pour moi de payer à l'international. les cartes mastercard/visa et services similaires à paypal ne sont présentement plus une option.",
+        "DonateSubtitle": "parce que c'est difficile de payer pour l'hébergement",
+        "DonateDescription": "je n'aime pas l'état de la crypto présentement, mais c'est présentement la seule manière pour moi de payer à l'international. les cartes mastercard/visa et services similaires à paypal ne sont présentement plus une option.",
         "LinkGitHubIssues": "&gt;&gt; signale des problèmes et examine le code source sur github",
         "LinkGitHubChanges": "&gt;&gt; examine les changements précédents et contribue sur github",
         "LinkDonateContact": "&gt;&gt; {ContactLink} si la monnaie que tu veux utiliser n'est pas listée",
