@@ -14,6 +14,7 @@ somachord aims to be the ultimate social media downloader, that is efficient, pr
 - douyin
 - reddit
 - tiktok
+- tumblr
 - twitter
 - youtube
 - youtube music
@@ -49,10 +50,10 @@ take english or portuguese (brazil) localization from [this directory](https://g
 
 ### services
 
-- [ ] tumblr support
+- [x] tumblr support
 - [ ] niconico support
 - [ ] instagram support
-- [ ] soundcloud support (?)
+- [ ] soundcloud support
 - [ ] add an option to save twitter gifs as `.gif` instead of `.mp4`
 - [ ] quality switching for bilibili
 
@@ -60,6 +61,7 @@ take english or portuguese (brazil) localization from [this directory](https://g
 
 - [ ] language picker in settings
 - [ ] make switch buttons in settings selectable with keyboard
+- [ ] option to save audios in formats other than original
 - [ ] make somachord fully pwa compatible (add a service worker)
 - [ ] make page rendering module more versatile
 

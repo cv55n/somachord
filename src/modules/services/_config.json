@@ -114,18 +114,10 @@
 
     "tumblr": {
         "patterns": [
-            "post/:id"
+            "post/:id", "blog/view/:user/:id"
         ],
 
-        "enabled": false
-    },
-
-    "facebook": {
-        "patterns": [
-            ":pageid/:type/:postid"
-        ],
-
-        "enabled": false
+        "enabled": true
     },
 
     "instagram": {
@@ -145,7 +137,9 @@
     },
 
     "douyin": {
-        "patterns": ["video/:postId", ":id"],
+        "patterns": [
+            "video/:postId", ":id"
+        ],
 
         "enabled": true
     }
