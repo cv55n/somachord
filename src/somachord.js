@@ -13,7 +13,7 @@ import { apiJSON, languageCode } from "./modules/sub/utils.js";
 import loc from "./modules/sub/i18n.js";
 import { Bright, Cyan } from "./modules/sub/consoleText.js";
 import stream from "./modules/stream/stream.js";
-import loc from "./localization/manager.js";
+import loc, { loadLoc } from "./localization/manager.js";
 import { buildFront } from "./modules/build.js"
 
 const commitHash = shortCommit();

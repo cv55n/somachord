@@ -2,7 +2,7 @@ import loadJson from "./sub/loadJSON.js";
 const config = loadJson("./src/config.json");
 const packageJson = loadJson("./package.json");
 
-export const services = loadJson("./src/modules/services/_config.json"),
+export const services = loadJson("./src/modules/servicesConfig.json"),
     appName = packageJson.name,
     version = packageJson.version,
     streamLifespan = config.streamLifespan,
