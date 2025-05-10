@@ -7,6 +7,7 @@ import twitter from "./services/twitter.js";
 import youtube from "./services/youtube.js";
 import vk from "./services/vk.js";
 import tiktok from "./services/tiktok.js";
+import douyin from "./services/douyin.js";
 
 export default async function (host, patternMatch, url, ip, lang, format, quality) {
     try {
@@ -120,7 +121,7 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                 } else throw Error();
 
             case "tiktok":
-                if ((patternMatch["user"] && patternMatch["type"] == "video" && patternMatch["postId"] && patternMatch["postId"].length <= 21) || (patternMatch["id"] && patternMatch["id"].length <= 13)) {
+                if ((patternMatch["user"] && patternMatch["postId"] && patternMatch["postId"].length <= 21) || (patternMatch["id"] && patternMatch["id"].length <= 13)) {
                     let r = await tiktok({
                         postId: patternMatch["postId"],
                         id: patternMatch["id"], lang: lang
@@ -136,6 +137,24 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                         salt: process.env.streamSalt
                     }) : apiJSON(0, { t: r.error });
                 } else throw Error();
+
+            case "douyin":
+                if ((patternMatch["postId"] && patternMatch["postId"].length <= 21) || (patternMatch["id"] && patternMatch["id"].length <= 13)) {
+                    let r = await douyin({
+                        postId: patternMatch["postId"],
+                        id: patternMatch["id"], lang: lang
+                    });
+
+                    return (!r.error) ? apiJSON(2, {
+                        type: "bridge",
+                        u: r.urls,
+                        lang: lang,
+                        service: host,
+                        ip: ip,
+                        filename: r.filename,
+                        salt: process.env.streamSalt
+                    }) : apiJSON(0, { t: r.error });
+                } else throw Error()
 
             default:
                 return apiJSON(0, { t: errorUnsupported(lang) });

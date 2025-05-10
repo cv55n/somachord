@@ -24,8 +24,7 @@ export default async function(obj) {
             }
         }
 
-        let url = `https://tiktok.com/@video/video/${obj.postId}`;
-        let html = await got.get(url, { headers: { "user-agent": genericUserAgent } });
+        let html = await got.get(`https://tiktok.com/@video/video/${obj.postId}`, { headers: { "user-agent": genericUserAgent } });
 
         html.on('error', (err) => {
             return {

@@ -19,6 +19,8 @@ somachord doesn't remux any videos, so you get videos of max quality available (
 
 ## to-do
 
+- [ ] niconico support
+- [ ] douyin support
 - [ ] instagram support
 - [ ] quality switching for bilibili and twitter
 - [ ] language picker in settings
