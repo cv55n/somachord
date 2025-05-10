@@ -130,7 +130,7 @@
 
     "tiktok": {
         "patterns": [
-            ":user/:type/:postId", ":id"
+            ":user/:type/:postId", ":id", "t/:id"
         ],
 
         "enabled": true
@@ -138,8 +138,7 @@
 
     "douyin": {
         "patterns": [
-            "video/:postId", ":id"
-        ],
+            "video/:postId", ":id"],
 
         "enabled": true
     }
