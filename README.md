@@ -46,6 +46,7 @@ code might be a little messy, but i do my best to improve it with every commit.
 
 - cors
 - dotenv
+- esbuild
 - express
 - express-rate-limit
 - ffmpeg-static
