@@ -14,6 +14,7 @@ import loc from "./modules/sub/i18n.js";
 import { Bright, Cyan } from "./modules/sub/consoleText.js";
 import stream from "./modules/stream/stream.js";
 import loc from "./localization/manager.js";
+import { buildFront } from "./modules/build.js"
 
 const commitHash = shortCommit();
 const app = express();
@@ -49,9 +50,12 @@ if (fs.existsSync('./.env')) {
         }
     });
 
+    await buildFront();
+
     app.use('/api/', apiLimiter);
     app.use('/api/stream', apiLimiterStream);
-    app.use('/', express.static('./src/static'));
+    app.use('/', express.static('./min'));
+    app.use('/', express.static('./src/front'));
 
     app.use((req, res, next) => {
         try {

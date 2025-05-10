@@ -21,8 +21,8 @@ somachord doesn't remux any videos, so you get videos of max quality available (
 
 - [ ] instagram support
 - [ ] quality switching for bilibili and twitter
-- [ ] Language picker in settings
-- [ ] use esmbuild to minify frontend css and js
+- [ ] language picker in settings
+- [ ] make somachord fully pwa compatible (add a service worker)
 - [ ] make switch buttons in settings selectable with keyboard
 - [ ] remake page rendering module to be more versatile
 - [ ] matching could be redone
