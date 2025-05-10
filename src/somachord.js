@@ -9,10 +9,11 @@ import { shortCommit } from "./modules/sub/currentCommit.js";
 import { appName, genericUserAgent, version, internetExplorerRedirect } from "./modules/config.js";
 import { getJSON } from "./modules/api.js";
 import renderPage from "./modules/pageRender.js";
-import { apiJSON } from "./modules/sub/utils.js";
+import { apiJSON, languageCode } from "./modules/sub/utils.js";
 import loc from "./modules/sub/i18n.js";
 import { Bright, Cyan } from "./modules/sub/consoleText.js";
 import stream from "./modules/stream/stream.js";
+import loc from "./localization/manager.js";
 
 const commitHash = shortCommit();
 const app = express();
@@ -29,7 +30,7 @@ if (fs.existsSync('./.env')) {
         handler: (req, res, next, opt) => {
             res.status(429).json({
                 "status": "error",
-                "text": loc('en', 'apiError', 'rateLimit')
+                "text": loc(languageCode(req), 'ErrorRateLimit')
             });
         }
     });
@@ -43,7 +44,7 @@ if (fs.existsSync('./.env')) {
         handler: (req, res, next, opt) => {
             res.status(429).json({
                 "status": "error",
-                "text": loc('en', 'apiError', 'rateLimit')
+                "text": loc(languageCode(req), 'ErrorRateLimit')
             });
         }
     });
@@ -71,7 +72,8 @@ if (fs.existsSync('./.env')) {
                             req.query.url.trim(),
 
                             req.header('x-forwarded-for') ? req.header('x-forwarded-for') : req.ip,
-                            req.header('Accept-Language') ? req.header('Accept-Language').slice(0, 2) : "en",
+
+                            languageCode(req),
                             
                             req.query.format ? req.query.format.slice(0, 5) : "mp4",
                             req.query.quality ? req.query.quality.slice(0, 3) : "max"
@@ -79,7 +81,7 @@ if (fs.existsSync('./.env')) {
 
                         res.status(j.status).json(j.body);
                     } else {
-                        let j = apiJSON(3, { t: loc('en', 'apiError', 'noURL', process.env.selfURL) });
+                        let j = apiJSON(3, { t: loc(languageCode(req), 'ErrorNoLink', process.env.selfURL) });
 
                         res.status(j.status).json(j.body);
                     }
@@ -94,7 +96,7 @@ if (fs.existsSync('./.env')) {
 
                         stream(res, ip, req.query.t, req.query.h, req.query.e);
                     } else {
-                        let j = apiJSON(0, { t: loc('en', 'apiError', 'noStreamID') });
+                        let j = apiJSON(0, { t: loc(languageCode(req), 'ErrorNoStreamID') });
 
                         res.status(j.status).json(j.body);
                     }
@@ -102,7 +104,7 @@ if (fs.existsSync('./.env')) {
                     break;
 
                 default:
-                    let j = apiJSON(0, { t: loc('en', 'apiError', 'noType') });
+                    let j = apiJSON(0, { t: loc(languageCode(req), 'ErrorNoType') });
 
                     res.status(j.status).json(j.body);
 
@@ -133,7 +135,7 @@ if (fs.existsSync('./.env')) {
             res.send(renderPage({
                 "hash": commitHash,
                 "type": "default",
-                "lang": req.header('Accept-Language') ? req.header('Accept-Language').slice(0, 2) : "en",
+                "lang": languageCode(req),
                 "useragent": req.header('user-agent') ? req.header('user-agent') : genericUserAgent
             }));
         }

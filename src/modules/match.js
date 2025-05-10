@@ -28,7 +28,7 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                         lang: lang, quality: quality
                     });
 
-                    return (!r.error) ? apiJSON(2, { type: "bridge", u: r.url, filename: r.filename, service: host, ip: ip, salt: process.env.streamSalt }) : apiJSON(0, { t: r.error });
+                    return (!r.error) ? apiJSON(2, { type: "bridge", lang: lang, u: r.url, filename: r.filename, service: host, ip: ip, salt: process.env.streamSalt }) : apiJSON(0, { t: r.error });
                 } else throw Error();
 
             case "bilibili":
@@ -79,6 +79,7 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
 
                     return (!r.error) ? apiJSON(2, {
                         type: r.type,
+                        lang: lang,
                         u: r.urls,
                         service: host,
                         ip: ip,
@@ -99,9 +100,13 @@ export default async function (host, patternMatch, url, ip, lang, format, qualit
                     });
                     
                     return (!r.error) ? apiJSON(r.typeId, {
-                        type: r.type, u: r.urls,
-                        service: host, ip: ip,
-                        filename: r.filename, salt: process.env.streamSalt
+                        type: r.type,
+                        u: r.urls,
+                        lang: lang,
+                        service: host,
+                        ip: ip,
+                        filename: r.filename,
+                        salt: process.env.streamSalt
                     }) : apiJSON(0, { t: r.error });
                 } else throw Error();
 

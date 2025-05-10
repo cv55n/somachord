@@ -24,7 +24,8 @@ export function createStream(obj) {
         ip: iphmac,
         exp: exp,
         isAudioOnly: obj.isAudioOnly ? true : false,
-        time: obj.time
+        time: obj.time,
+        lang: lang
     });
 
     return `${process.env.selfURL}api/stream?t=${streamUUID}&e=${exp}&h=${ghmac}`;

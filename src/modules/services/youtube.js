@@ -1,6 +1,6 @@
 import ytdl from "ytdl-core";
 
-import loc from "../sub/i18n.js";
+import loc from "../../localization/manager.js";
 import { maxVideoDuration, quality as mq } from "../config.js";
 import selectQuality from "../stream/selectQuality.js";
 
@@ -56,25 +56,25 @@ export default async function (obj) {
                                 return { type: "render", urls: [videoMatch[0]["url"], audio[0]["url"]], time: videoMatch[0]["approxDurationMs"], filename: `youtube_${obj.id}_${videoMatch[0]["width"]}x${videoMatch[0]["height"]}.${obj.format}` };
                             }
                         } else {
-                            return { error: loc('en', 'apiError', 'errorFetch') };
+                            return { error: loc(obj.lang, 'ErrorBadFetch') };
                         }
                     } else if (!obj.isAudioOnly) {
                         return { type: "render", urls: [video[0]["url"], audio[0]["url"]], time: video[0]["approxDurationMs"], filename: `youtube_${obj.id}_${video[0]["width"]}x${video[0]["height"]}.${video[0]["container"]}` };
                     } else if (audio.length > 0) {
                         return { type: "render", isAudioOnly: true, urls: [audio[0]["url"]], filename: `youtube_${obj.id}_${audio[0]["audioBitrate"]}kbps.opus` };
                     } else {
-                        return { error: loc('en', 'apiError', 'errorFetch') };
+                        return { error: loc(obj.lang, 'ErrorBadFetch') };
                     }
                 } else {
-                    return { error: loc('en', 'apiError', 'lengthLimit', maxVideoDuration / 60000) };
+                    return { error: loc(obj.lang, 'ErrorLengthLimit', maxVideoDuration / 60000) };
                 }
             } else {
-                return { error: loc('en', 'apiError', 'liveVideo') };
+                return { error: loc(obj.lang, 'ErrorLiveVideo') };
             }
         } else {
-            return { error: loc('en', 'apiError', 'youtubeFetch') };
+            return { error: loc(obj.lang, 'ErrorCantConnectToServiceAPI') };
         }
     } catch (e) {
-        return { error: loc('en', 'apiError', 'youtubeFetch') };
+        return { error: loc(obj.lang, 'ErrorBadFetch') };
     }
 }

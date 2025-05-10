@@ -5,7 +5,7 @@ import got from "got";
 import { ffmpegArgs, genericUserAgent } from "../config.js";
 import { msToTime } from "../sub/utils.js";
 import { internalError } from "../sub/errors.js";
-import loc from "../sub/i18n.js";
+import loc from "../../localization/manager.js";
 
 export async function streamDefault(streamInfo, res) {
     try {
@@ -96,7 +96,7 @@ export async function streamLiveRender(streamInfo, res) {
             });
         } else {
             res.status(400).json({
-                status: "error", text: loc('en', 'apiError', 'corruptedStream')
+                status: "error", text: loc(streamInfo.lang , 'ErrorCorruptedStream')
             });
         }
     } catch (e) {
